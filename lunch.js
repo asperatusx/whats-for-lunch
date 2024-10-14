@@ -14,7 +14,16 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  if (hungry === false) return console.log("Go back to work")
+  if (availableTime < 20) {
+    return console.log("Go get a snack or something small at home")
+  }
+  if (availableTime >= 20 && availableTime <= 30) {
+    return console.log("You deserve a break and should cook yourself a nice meal")
+  }
+  if (availableTime > 30) {
+    return console.log("You have too much time for lunch, go back to work")
+  }
 }
 
 
